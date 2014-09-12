@@ -1,8 +1,7 @@
 package edge.dao.sql;
 
 /**
- * @ClassName SqlCommand
- * @Description Sql指令
+ * Sql指令
  * @author WenChao_Liu@163.com
  * @date 2014年8月10日
  */

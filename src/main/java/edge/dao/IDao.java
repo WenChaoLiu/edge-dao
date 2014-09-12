@@ -13,33 +13,28 @@ import edge.dao.sql.dialect.IDbDialect;
 public abstract interface IDao extends IObjectDao,ISqlDao{
 	
 	/**
-	 * 获取Dao对应的数据源
-	 * @return
+	 * 获取传统Jdbc访问数据的对象
 	 */
-	public abstract DataSource getDataSource();
-	
-	/**
-	 * 获取传统jdbc访问数据的对象
-	 * @return
-	 */
-	public abstract IJdbcDao getJdbcDao();
-	
-	
-	/**
-	 * 获取指定sqlId且与当前数据库类型配套的sql
-	 * @param sqlId
-	 * @return
-	 */
-	public abstract String getSql(String sqlId);
+	IJdbcDao getJdbcDao();
 	
 	/**
 	 * 获取sql解析器
 	 */
-	public abstract SqlParser getSqlParser();
+	SqlParser getSqlParser();
+	
+	/**
+	 * 获取指定sqlId且与当前数据库类型配套的sql
+	 */
+	String getSql(String sqlId);
+	
+	/**
+	 * 获取Dao对应的数据源
+	 */
+	DataSource getDataSource();
 	
 	/**
 	 * 获取Dao对应数据库的方言
 	 */
-	public abstract IDbDialect getDbDialect();
+	IDbDialect getDbDialect();
 	
 }

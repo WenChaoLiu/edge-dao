@@ -10,7 +10,7 @@ import org.springframework.dao.DataAccessException;
  * @author WenChao_Liu@163.com
  * @date 2014年8月10日
  */
-public abstract interface IJdbcDao {
+public interface IJdbcDao {
 	
 	/**
 	 * 基于jdbc方式插入单条数据
@@ -53,7 +53,7 @@ public abstract interface IJdbcDao {
 	 * @param sql DDL或者DML
 	 * @throws DataAccessException 有可能发生数据访问异常
 	 */
-	public abstract void execute(String paramString) throws DataAccessException;
+	public abstract void execute(String sql) throws DataAccessException;
 	
 	/**
 	 * 查询单条数据，以Map的格式返回（传统问号占位符模式）
